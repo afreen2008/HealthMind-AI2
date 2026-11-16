@@ -1,0 +1,109 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>HealthMind AI – Personal Health Guidance Platform</title>
+  <meta name="description" content="Personalized, safe, educational wellness and lifestyle guidance based on selected health conditions and symptoms. 100% client-side privacy with medically reviewed logic." />
+  <meta name="keywords" content="health guidance, wellness routine, symptom checker, medical wellness, daily routine, sleep ergonomics, client-side privacy, health education" />
+  <meta name="author" content="HealthMind AI Team" />
+  <meta name="theme-color" content="#0284c7" />
+
+  <!-- Open Graph Meta Tags (Optimized for WhatsApp, Facebook, LinkedIn previews) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="HealthMind AI" />
+  <meta property="og:title" content="HealthMind AI – Personal Health Guidance Platform" />
+  <meta property="og:description" content="Understand health concerns and receive personalized, safe, educational wellness guidance based on your conditions and symptoms. 100% private, no AI keys required." />
+  <meta property="og:image" content="./og-preview.png" />
+  <meta property="og:image:secure_url" content="./og-preview.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="HealthMind AI - Personal Health Guidance Platform" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="HealthMind AI – Personal Health Guidance Platform" />
+  <meta name="twitter:description" content="Personalized educational wellness guidance based on your selected health conditions and symptoms. 100% private." />
+  <meta name="twitter:image" content="./og-preview.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🩺</text></svg>" />
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          },
+          colors: {
+            sky: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              200: '#bae6fd',
+              300: '#7dd3fc',
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+              800: '#075985',
+              900: '#0c4a6e',
+              950: '#082f49',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Core App Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="bg-slate-50 text-slate-900 font-sans min-h-screen flex flex-col selection:bg-sky-500 selection:text-white">
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="fixed bottom-6 right-6 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+  <!-- Main Application Container -->
+  <div id="app" class="flex-1 flex flex-col">
+    <!-- Initial Loading State -->
+    <div class="flex-1 flex flex-col items-center justify-center p-8 text-center min-h-[60vh]">
+      <div
+        class="w-16 h-16 rounded-3xl bg-gradient-to-tr from-sky-600 to-blue-600 flex items-center justify-center text-white shadow-xl shadow-sky-500/25 animate-bounce mb-4">
+        <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path
+            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
+          </path>
+        </svg>
+      </div>
+      <h2 class="text-xl font-bold text-slate-800">HealthMind AI</h2>
+      <p class="text-sm text-slate-500 mt-1">Initializing Medically Reviewed Guidance Engine...</p>
+    </div>
+  </div>
+
+  <!-- Fallback for Non-JS Browsers -->
+  <noscript>
+    <div class="fixed inset-0 bg-white z-50 flex items-center justify-center p-6 text-center">
+      <div class="max-w-md">
+        <h2 class="text-2xl font-bold text-slate-900 mb-2">JavaScript Required</h2>
+        <p class="text-slate-600 text-sm">HealthMind AI requires JavaScript enabled to run the local rule-based
+          recommendation system safely in your browser.</p>
+      </div>
+    </div>
+  </noscript>
+
+  <!-- Main App Script -->
+  <script src="js/bundle.js"></script>
+</body>
+
+</html>
